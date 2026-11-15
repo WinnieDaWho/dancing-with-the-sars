@@ -1,0 +1,45 @@
+{
+  "checked_at_utc": "2026-11-15T15:12:33.011503+00:00",
+  "static_checks": {
+    "duplicate_ids": [],
+    "missing_assets": [],
+    "broken_fragment_links": [],
+    "javascript_syntax": "passed"
+  },
+  "media": {
+    "duration_seconds": 28.8,
+    "under_30_seconds": true,
+    "english_captions_within_runtime": true,
+    "narration": false,
+    "music": "original procedural synthesis",
+    "width": 1280,
+    "height": 720
+  },
+  "deck": {
+    "pdf_pages": 7,
+    "pptx_slides": 7
+  },
+  "archives": {
+    "project-source.zip": {
+      "integrity": "passed",
+      "secret_filename_check": "passed",
+      "path_safety": "passed"
+    },
+    "rhd-labs-delivery-kit.zip": {
+      "integrity": "passed",
+      "secret_filename_check": "passed",
+      "path_safety": "passed"
+    }
+  },
+  "foundation_tests": "4 passed; separate from ingestion or application tests",
+  "browser_interaction_console_and_incognito": "not verified: managed browser helper unavailable",
+  "application_localhost_4173": "not running in this execution environment",
+  "actual_nisar_measurements": "none in this showcase",
+  "public_http_checks": {
+    "result": "10 of 10 primary site/asset URLs returned HTTP 200 anonymously",
+    "login_wall_detected": false,
+    "record": "public-verification.json",
+    "github": "not public at intended URL; HTTP 404",
+    "incognito_browser": "not verified"
+  }
+}

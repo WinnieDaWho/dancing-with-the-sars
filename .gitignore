@@ -1,0 +1,40 @@
+# --- Secrets & credentials (never commit) ---
+.env
+.env.*
+!.env.example
+.netrc
+_netrc
+*.pem
+*.key
+
+# --- NASA Earthdata HDF5 granules (30GB-class, never commit) ---
+*.h5
+*.hdf5
+*.nc
+
+# --- Python ---
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+build/
+
+# --- Node / frontend ---
+node_modules/
+gods-eye-view/node_modules/
+gods-eye-view/dist/
+.vite/
+
+# --- OS / editor noise ---
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+.idea/
+.vscode/

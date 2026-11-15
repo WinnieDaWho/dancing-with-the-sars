@@ -1,0 +1,37 @@
+{
+  "status": "example_contract_not_implemented_here",
+  "routes": {
+    "/api/nisar/anomalies": {
+      "type": "FeatureCollection",
+      "data_mode": "simulated",
+      "features": [
+        {
+          "type": "Feature",
+          "geometry": {
+            "type": "Polygon",
+            "coordinates": [[[-105.55,50.45],[-105.52,50.45],[-105.52,50.47],[-105.55,50.47],[-105.55,50.45]]]
+          },
+          "properties": {
+            "data_mode": "simulated",
+            "region_name": "Saskatchewan demonstration area",
+            "hazard_type": "SUBSURFACE_SATURATION",
+            "mean_backscatter_delta_db": -4.8,
+            "soil_saturation_pct": 88.5,
+            "granule_id": null,
+            "acquisition_before": null,
+            "acquisition_after": null,
+            "source_urls": [],
+            "algorithm": "deterministic_fixture",
+            "limitations": "Synthetic example; not a measured soil-moisture estimate or alert."
+          }
+        }
+      ]
+    },
+    "/api/nisar/pinpoint": {
+      "parameters": {"lat": 50.4547, "lon": -105.5349, "radius_km": 25},
+      "expected_fields": ["data_mode", "features", "voice_briefing", "provenance"],
+      "voice_requirement": "Begin a seeded-data briefing by explicitly saying this is a simulated demonstration."
+    }
+  }
+}
+

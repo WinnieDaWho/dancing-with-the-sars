@@ -1,0 +1,124 @@
+{
+  "checked_at_utc": "2026-11-15T15:15:27.064846+00:00",
+  "method": "Anonymous HTTP GET/Range; no cookies, bearer token, or logged-in browser",
+  "site_and_asset_checks": [
+    {
+      "url": "https://rhd-labs-dancing-with-the-sars.winnieintheweeds.chatgpt.site/",
+      "expected_type": "html",
+      "authenticated": false,
+      "status": 200,
+      "final_url": "https://rhd-labs-dancing-with-the-sars.winnieintheweeds.chatgpt.site/",
+      "content_type": "text/html",
+      "login_wall_detected": false,
+      "signature_matches": true,
+      "passed": true
+    },
+    {
+      "url": "https://rhd-labs-dancing-with-the-sars.winnieintheweeds.chatgpt.site/assets/demo-reel.mp4",
+      "expected_type": "mp4",
+      "authenticated": false,
+      "status": 200,
+      "final_url": "https://rhd-labs-dancing-with-the-sars.winnieintheweeds.chatgpt.site/assets/demo-reel.mp4",
+      "content_type": "video/mp4",
+      "login_wall_detected": false,
+      "signature_matches": true,
+      "passed": true
+    },
+    {
+      "url": "https://rhd-labs-dancing-with-the-sars.winnieintheweeds.chatgpt.site/assets/demo-reel.srt",
+      "expected_type": "text",
+      "authenticated": false,
+      "status": 200,
+      "final_url": "https://rhd-labs-dancing-with-the-sars.winnieintheweeds.chatgpt.site/assets/demo-reel.srt",
+      "content_type": "text/plain",
+      "login_wall_detected": false,
+      "signature_matches": true,
+      "passed": true
+    },
+    {
+      "url": "https://rhd-labs-dancing-with-the-sars.winnieintheweeds.chatgpt.site/assets/demo-reel.vtt",
+      "expected_type": "vtt",
+      "authenticated": false,
+      "status": 200,
+      "final_url": "https://rhd-labs-dancing-with-the-sars.winnieintheweeds.chatgpt.site/assets/demo-reel.vtt",
+      "content_type": "text/vtt",
+      "login_wall_detected": false,
+      "signature_matches": true,
+      "passed": true
+    },
+    {
+      "url": "https://rhd-labs-dancing-with-the-sars.winnieintheweeds.chatgpt.site/assets/rhd-labs-7-slide-deck.pdf",
+      "expected_type": "pdf",
+      "authenticated": false,
+      "status": 200,
+      "final_url": "https://rhd-labs-dancing-with-the-sars.winnieintheweeds.chatgpt.site/assets/rhd-labs-7-slide-deck.pdf",
+      "content_type": "application/pdf",
+      "login_wall_detected": false,
+      "signature_matches": true,
+      "passed": true
+    },
+    {
+      "url": "https://rhd-labs-dancing-with-the-sars.winnieintheweeds.chatgpt.site/assets/rhd-labs-7-slide-deck.pptx",
+      "expected_type": "zip",
+      "authenticated": false,
+      "status": 200,
+      "final_url": "https://rhd-labs-dancing-with-the-sars.winnieintheweeds.chatgpt.site/assets/rhd-labs-7-slide-deck.pptx",
+      "content_type": "application/octet-stream",
+      "login_wall_detected": false,
+      "signature_matches": true,
+      "passed": true
+    },
+    {
+      "url": "https://rhd-labs-dancing-with-the-sars.winnieintheweeds.chatgpt.site/assets/project-source.zip",
+      "expected_type": "zip",
+      "authenticated": false,
+      "status": 200,
+      "final_url": "https://rhd-labs-dancing-with-the-sars.winnieintheweeds.chatgpt.site/assets/project-source.zip",
+      "content_type": "application/zip",
+      "login_wall_detected": false,
+      "signature_matches": true,
+      "passed": true
+    },
+    {
+      "url": "https://rhd-labs-dancing-with-the-sars.winnieintheweeds.chatgpt.site/assets/rhd-labs-delivery-kit.zip",
+      "expected_type": "zip",
+      "authenticated": false,
+      "status": 200,
+      "final_url": "https://rhd-labs-dancing-with-the-sars.winnieintheweeds.chatgpt.site/assets/rhd-labs-delivery-kit.zip",
+      "content_type": "application/zip",
+      "login_wall_detected": false,
+      "signature_matches": true,
+      "passed": true
+    },
+    {
+      "url": "https://rhd-labs-dancing-with-the-sars.winnieintheweeds.chatgpt.site/assets/submission-copy.md",
+      "expected_type": "text",
+      "authenticated": false,
+      "status": 200,
+      "final_url": "https://rhd-labs-dancing-with-the-sars.winnieintheweeds.chatgpt.site/assets/submission-copy.md",
+      "content_type": "text/markdown",
+      "login_wall_detected": false,
+      "signature_matches": true,
+      "passed": true
+    },
+    {
+      "url": "https://rhd-labs-dancing-with-the-sars.winnieintheweeds.chatgpt.site/assets/ai-and-data-disclosure.md",
+      "expected_type": "text",
+      "authenticated": false,
+      "status": 200,
+      "final_url": "https://rhd-labs-dancing-with-the-sars.winnieintheweeds.chatgpt.site/assets/ai-and-data-disclosure.md",
+      "content_type": "text/markdown",
+      "login_wall_detected": false,
+      "signature_matches": true,
+      "passed": true
+    }
+  ],
+  "all_site_assets_public": true,
+  "github": {
+    "url": "https://github.com/WinnieDaWho/dancing-with-the-sars",
+    "verified_public": false,
+    "result": "HTTP Error 404: Not Found"
+  },
+  "incognito_browser_and_playback": "not verified",
+  "deployment": "Sites native publication succeeded, version 1"
+}

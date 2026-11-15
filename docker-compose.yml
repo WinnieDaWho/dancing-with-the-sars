@@ -1,0 +1,23 @@
+services:
+  postgis:
+    image: postgis/postgis:16-3.4-alpine
+    container_name: dwts-postgis
+    environment:
+      POSTGRES_USER: dwts
+      POSTGRES_PASSWORD: dwts_local_dev
+      POSTGRES_DB: dwts
+    ports:
+      # Host 5433 -> container 5432 (5432 left free for any local Postgres)
+      - "5433:5432"
+    volumes:
+      # SQL files run alphabetically on FIRST container init (empty data dir)
+      - ./sql:/docker-entrypoint-initdb.d:ro
+      - dwts_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U dwts -d dwts"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+
+volumes:
+  dwts_pgdata:

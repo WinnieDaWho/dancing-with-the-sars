@@ -1,0 +1,24 @@
+1
+00:00:00,200 --> 00:00:06,000
+Water shapes a farm and a mountainside
+in very different ways.
+
+2
+00:00:06,100 --> 00:00:10,500
+But understanding change begins with seeing it.
+
+3
+00:00:10,600 --> 00:00:17,000
+RHD Labs imagines NISAR radar, small data windows,
+and a shared globe working together.
+
+4
+00:00:17,100 --> 00:00:24,000
+Our Saskatchewan and British Columbia examples are simulated,
+showing how a future workflow could make complex observations easier to discuss.
+
+5
+00:00:24,100 --> 00:00:29,200
+Open the data story, inspect the evidence,
+and keep uncertainty in view.
+
