@@ -1,0 +1,1 @@
+- Add the NASA NISAR SAR surface-change layer (local backend via `/api/nisar`), the `scan_nisar_radar` voice session tool, and the "NISAR Radar Sweep" Director scene.
