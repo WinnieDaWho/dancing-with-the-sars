@@ -1,5 +1,10 @@
 # Dancing with the SARS
 
+> **🌐 Live demo (Cloudflare Pages):** deploy pending first `wrangler login` on the build machine —
+> once deployed the cockpit runs 100% on Cloudflare's edge (no localhost) at
+> `https://dancing-with-the-sars.pages.dev` and `https://sars.rabbitholedigitalsolutions.com`.
+> One-command deploy: `cd gods-eye-view && npx wrangler login && npm run build && npx wrangler pages deploy`
+
 **2026 NASA Space Apps Challenge — "Through the Radar Looking Glass: Revealing Earth Processes with SAR"**
 
 An interactive application that uses radar remote sensing data from the
@@ -81,6 +86,32 @@ Try it:
 ```
 curl "http://localhost:8077/api/nisar/pinpoint?lat=49.3858&lon=-121.4419&radius_km=25"
 ```
+
+## Cloudflare edge deployment
+
+The cockpit also runs serverless on Cloudflare Pages: a Pages Function
+(`gods-eye-view/functions/api/nisar/[[path]].js`) serves
+`/api/nisar/anomalies` and `/api/nisar/pinpoint` at the edge with the exact
+same contract as the local PostGIS chain — normalized rows for the layer,
+`data_mode` / `provenance` / `voice_briefing` for pinpoint, distance and
+urgency replicating `fn_pinpoint_nisar_anomalies` (verified byte-equal against
+the live backend by a 16-check parity suite). Rows stay
+`data_mode: "simulated"` — deterministic fixtures, never presented as live
+observations.
+
+```powershell
+cd gods-eye-view
+npx wrangler login     # one-time browser OAuth
+npm run build
+npx wrangler pages deploy    # project: dancing-with-the-sars (wrangler.jsonc)
+```
+
+Then attach the custom domain in the Cloudflare dashboard: **Workers & Pages →
+dancing-with-the-sars → Custom domains → add `sars.rabbitholedigitalsolutions.com`**
+(the zone is already on Cloudflare, so DNS is wired automatically).
+External live layers that depend on the local dev proxies (flights, vessels,
+etc.) degrade gracefully on the edge build; the globe, NISAR layer, HUD cards,
+and Director scene are fully functional.
 
 ## Voice demo
 

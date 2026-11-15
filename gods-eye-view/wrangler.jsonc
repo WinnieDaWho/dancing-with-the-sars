@@ -1,0 +1,8 @@
+// Cloudflare Pages config: deploy the built cockpit plus the edge NISAR API
+// (functions/api/nisar/[[path]].js). From this directory, after `npm run build`:
+//   npx wrangler pages deploy
+{
+  "name": "dancing-with-the-sars",
+  "pages_build_output_dir": "dist",
+  "compatibility_date": "2026-11-01"
+}
