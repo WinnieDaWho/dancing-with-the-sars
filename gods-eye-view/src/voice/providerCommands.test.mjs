@@ -952,3 +952,19 @@ test('a provider message with placeholders is worded again with them', async (t2
     'Gemini token request failed (HTTP 502)',
   );
 });
+
+test('host voice preference applies only without a valid saved choice', () => {
+  const supported = ['openai', 'gemini', 'elevenlabs'];
+  assert.equal(
+    readVoiceProvider({ getItem: () => null }, supported, 'elevenlabs'),
+    'elevenlabs',
+  );
+  assert.equal(
+    readVoiceProvider({ getItem: () => 'gemini' }, supported, 'elevenlabs'),
+    'gemini',
+  );
+  assert.equal(
+    readVoiceProvider({ getItem: () => 'unknown' }, ['openai'], 'elevenlabs'),
+    'openai',
+  );
+});

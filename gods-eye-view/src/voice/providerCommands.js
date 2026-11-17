@@ -2,7 +2,11 @@ import { supportedVoiceProviders } from './providerCapabilities.js';
 
 const STORAGE_KEY = 'gev.voice.provider';
 
-export function readVoiceProvider(storage, supported = ['openai', 'gemini']) {
+export function readVoiceProvider(
+  storage,
+  supported = ['openai', 'gemini'],
+  preferred = null,
+) {
   let saved;
   try {
     saved = (storage ?? globalThis.localStorage)?.getItem(STORAGE_KEY);
@@ -11,9 +15,11 @@ export function readVoiceProvider(storage, supported = ['openai', 'gemini']) {
   }
   return supported.includes(saved)
     ? saved
-    : supported.includes('openai')
-      ? 'openai'
-      : supported[0];
+    : supported.includes(preferred)
+      ? preferred
+      : supported.includes('openai')
+        ? 'openai'
+        : supported[0];
 }
 
 /** Keep one public controller identity while replacing each provider's lifetime. */
@@ -23,7 +29,11 @@ export function createProviderCommands(options, { bind, factories, storage }) {
     factories,
   );
   window.__gevVoiceCommands?.stop?.({ removeUi: true });
-  let provider = readVoiceProvider(storage, supportedProviders);
+  let provider = readVoiceProvider(
+    storage,
+    supportedProviders,
+    options.defaultProvider,
+  );
   let current;
   let disposed = false;
   const lifetime = new AbortController();

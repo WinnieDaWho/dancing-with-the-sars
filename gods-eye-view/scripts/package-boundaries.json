@@ -2554,9 +2554,12 @@
       "src/ui/stores/voice.js",
       "src/ui/vueRuntime.js",
       "src/ui/stores/pointerReticle.js",
-      "src/ui/i18n.js"
+      "src/ui/i18n.js",
+      "src/voice/elevenlabsSession.js",
+      "src/voice/elevenlabsTools.json",
+      "src/tools/schema.js"
     ],
-    "external": ["vue", "pinia", "vue-i18n"]
+    "external": ["vue", "pinia", "vue-i18n", "@elevenlabs/client"]
   },
   "application-components": {
     "exports": [
@@ -3834,7 +3837,10 @@
       "src/data/openVesselPhoto.js",
       "src/layers/vessels/photos.js",
       "src/layers/flights/placed.js",
-      "src/data/placementProvider.js"
+      "src/data/placementProvider.js",
+      "src/voice/elevenlabsSession.js",
+      "src/voice/elevenlabsTools.json",
+      "src/tools/schema.js"
     ],
     "external": [
       "hls.js",
@@ -3850,7 +3856,8 @@
       "fzstd",
       "vue",
       "pinia",
-      "vue-i18n"
+      "vue-i18n",
+      "@elevenlabs/client"
     ]
   },
   "application-catalog": {

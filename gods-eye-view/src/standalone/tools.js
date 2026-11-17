@@ -18,7 +18,8 @@ export function createStandaloneTools(options) {
     },
     ...options,
     voice: {
-      supportedProviders: ['openai', 'gemini'],
+      supportedProviders: ['openai', 'gemini', 'elevenlabs'],
+      defaultProvider: import.meta.env?.VITE_GEV_DEFAULT_VOICE_PROVIDER,
       panel: true,
       toolCatalog: loadToolCatalog,
       ...options?.voice,
